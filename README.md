@@ -66,6 +66,15 @@ fo = FileOrganizer(source_dir="./downloads")
 fo.organize(rules={"pdf": "documentos", "xlsx": "planilhas", "dwg": "projetos"})
 ```
 
+### 🔄 `git-tools/verificar-repos.ps1`
+Compara todos os repositórios de `C:\DEV` com o GitHub (fetch + status) e mostra uma tabela com o estado de cada um: OK, atrás, falta push, alterações locais ou divergente. Não altera nada por padrão.
+
+```powershell
+.\verificar-repos.ps1           # só mostra o estado
+.\verificar-repos.ps1 -Pull     # também atualiza os que estão só atrás e sem alterações locais
+.\verificar-repos.ps1 -Clonar   # também clona os repos do GitHub que ainda não estão em C:\DEV
+```
+
 ---
 
 ## ⚙️ Requisitos
